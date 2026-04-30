@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Test";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-success text-white py-4">
+                    <h1 class="h3 mb-0">@ViewData["Title"]</h1>
+                </div>
+                <div class="card-body">
+                    <p class="lead mb-4">Esta es una página de prueba para validar el funcionamiento de la aplicación.</p>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0">
+                                <div class="card-body p-4">
+                                    <i class="bi bi-code-slash fs-1 text-primary mb-3 d-block"></i>
+                                    <h5 class="card-title">Pruebas de Funcionalidad</h5>
+                                    <p class="card-text">Validamos que todas las características funcionen correctamente.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0">
+                                <div class="card-body p-4">
+                                    <i class="bi bi-check-circle fs-1 text-success mb-3 d-block"></i>
+                                    <h5 class="card-title">Control de Calidad</h5>
+                                    <p class="card-text">Cada componente pasa por rigurosas pruebas antes del lanzamiento.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a href="~/Home/Index" class="btn btn-outline-primary">Volver al Inicio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
