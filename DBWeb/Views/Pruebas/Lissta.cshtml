@@ -2,6 +2,7 @@
 @{
     ViewData["Title"] = "Lista de Productos";
     var productos = ViewData["Productos"] as List<Producto> ?? new List<Producto>();
+    var categorias = ViewData["Categorias"] as List<Categoria> ?? new List<Categoria>();
 }
 
 <div class="container py-5">
@@ -10,6 +11,21 @@
             <div class="card shadow-sm border-0">
                 <div class="card-header bg-primary text-white py-4">
                     <h1 class="h3 mb-0">@ViewData["Title"]</h1>
+                </div>
+                <div>
+                    <form method="post" asp-controller="Pruebas" asp-action="Buscar">
+                        <label>Categoría:</label>
+                        <select name="categoriaId">
+                            <option value="">-- Seleccione una categoría --</option>
+                            @foreach (var categoria in categorias)
+                            {
+                                <option value="@categoria.IDCategoria">@categoria.Nombre</option>
+                            }
+                        </select>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg py-3">Buscar</button>
+                        </div>
+                    </form>
                 </div>
                 <div class="card-body p-4">
                     @if (productos.Any())

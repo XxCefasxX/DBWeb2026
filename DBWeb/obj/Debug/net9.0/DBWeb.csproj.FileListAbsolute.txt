@@ -330,3 +330,4 @@ C:\Users\salaz\OneDrive\Escritorio\unidep\bd ingenieria\IntroDB_WEB\DBWeb\bin\De
 C:\Users\salaz\OneDrive\Escritorio\unidep\bd ingenieria\IntroDB_WEB\DBWeb\bin\Debug\net9.0\runtimes\win-x64\native\k5sprt64.dll
 C:\Users\salaz\OneDrive\Escritorio\unidep\bd ingenieria\IntroDB_WEB\DBWeb\bin\Debug\net9.0\runtimes\win-x64\native\krb5_64.dll
 C:\Users\salaz\OneDrive\Escritorio\unidep\bd ingenieria\IntroDB_WEB\DBWeb\bin\Debug\net9.0\runtimes\win-x64\native\krbcc64.dll
+C:\Users\salaz\OneDrive\Escritorio\unidep\bd ingenieria\IntroDB_WEB\DBWeb\obj\Debug\net9.0\DBWeb.sourcelink.json

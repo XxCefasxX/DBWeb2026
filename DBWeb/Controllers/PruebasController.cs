@@ -77,6 +77,15 @@ namespace DBWeb.Controllers
         }
         public IActionResult Lissta()
         {
+            var categorias = new List<Categoria>
+            {
+                new Categoria { IDCategoria = 1, Nombre = "Verduras" },
+                new Categoria { IDCategoria = 2, Nombre = "Carnes" },
+                new Categoria { IDCategoria = 3, Nombre = "Lacteos" },
+                new Categoria { IDCategoria = 4, Nombre = "Abarrotes" },
+            };
+            ViewData["Categorias"] = categorias;
+
             List<Producto> productos = new List<Producto>();
 
             MySqlConnection conect = new MySqlConnection(connStr);
@@ -114,9 +123,47 @@ namespace DBWeb.Controllers
             return View();
         }
 
+        public IActionResult Buscar(int categoriaId)
+        {
+            List<Producto> productos = new List<Producto>();
+
+            MySqlConnection conect = new MySqlConnection(connStr);
+            MySqlCommand comand = new MySqlCommand("select * from productos where id_categoria=@categoria;", conect);
+            comand.Parameters.AddWithValue("@categoria", categoriaId);
+            try
+            {
+                conect.Open();
+                MySqlDataReader dr = comand.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        Producto producto = new Producto
+                        {
+                            Nombre = dr["nombre"].ToString(),
+                            Categoria = dr["id_categoria"].ToString(),
+                            Descripcion = dr["Descripcion"].ToString(),
+                            Precio = Convert.ToDecimal(dr["Precio"].ToString())
+                        };
+                        productos.Add(producto);
+                    }
+                }
+                dr.Close();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                conect.Close();
+            }
+
+            ViewData["Productos"] = productos;
+            return View("Lissta");
+        }
 
 
-       
     }
 
    

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DBWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fe26af5ea706a27371287905a4c248af6277f5f8")]
 [assembly: System.Reflection.AssemblyProductAttribute("DBWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DBWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
